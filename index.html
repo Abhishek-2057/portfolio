@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhishek Kanaujiya — Full-Stack Developer</title>
+<meta name="description" content="Abhishek Kanaujiya — Full-Stack Developer building web apps with React, Node.js and MongoDB.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <span class="logo-bracket">&lt;</span>AK<span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <nav class="tabs" id="tabs">
+      <a href="#home" class="tab active" data-tab>home<span class="ext">.tsx</span></a>
+      <a href="#about" class="tab" data-tab>about<span class="ext">.tsx</span></a>
+      <a href="#skills" class="tab" data-tab>skills<span class="ext">.json</span></a>
+      <a href="#work" class="tab" data-tab>work<span class="ext">.tsx</span></a>
+      <a href="#projects" class="tab" data-tab>projects<span class="ext">.tsx</span></a>
+      <a href="#contact" class="tab" data-tab>contact<span class="ext">.tsx</span></a>
+    </nav>
+
+    <div class="theme-switch" id="themeSwitch">
+      <button class="theme-btn" id="themeBtn" aria-haspopup="true" aria-expanded="false" aria-label="Change color theme">
+        <i class='bx bx-palette'></i>
+      </button>
+      <ul class="theme-menu" id="themeMenu" role="menu">
+        <li role="none"><button role="menuitem" data-theme="light"><span class="swatch swatch-light"></span>Light</button></li>
+        <li role="none"><button role="menuitem" data-theme="dark"><span class="swatch swatch-dark"></span>Dark</button></li>
+        <li role="none"><button role="menuitem" data-theme="dracula"><span class="swatch swatch-dracula"></span>Dracula</button></li>
+        <li role="none"><button role="menuitem" data-theme="nord"><span class="swatch swatch-nord"></span>Nord</button></li>
+      </ul>
+    </div>
+
+    <a href="assets/Abhishek_kanaujiya_Resume6.pdf" download class="btn btn-ghost nav-cta">
+      <i class='bx bx-download'></i> Résumé
+    </a>
+
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">// full-stack developer</p>
+      <h1 class="hero-title">Hi, I'm Abhishek<br>Kanaujiya.</h1>
+      <p class="hero-lead">
+        I design and ship full-stack web applications — from role-based ERP systems
+        to real-time booking platforms — using React, Node.js and MongoDB. Currently
+        a B.Tech IT student building production software for real clients.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects <i class='bx bx-right-arrow-alt'></i></a>
+        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+      </div>
+      <div class="social-row">
+        <a href="https://github.com/Abhishek-2057" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+        <a href="https://linkedin.com/in/abhishek-kanaujiya" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin-square'></i></a>
+        <a href="mailto:kavikumar0454@gmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
+        <a href="tel:+919580285184" aria-label="Phone"><i class='bx bx-phone'></i></a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="code-card">
+        <div class="code-topbar">
+          <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          <span class="code-filename">developer.js</span>
+        </div>
+        <pre class="code-body"><code id="typewriter"></code><span class="cursor">&#8203;</span></pre>
+      </div>
+      <button class="hero-photo" id="heroPhotoBtn" aria-label="Enlarge photo">
+        <img src="assets/Abhishek_image.jpg" alt="Portrait of Abhishek Kanaujiya">
+      </button>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll to About"><i class='bx bx-chevron-down'></i></a>
+</section>
+
+<!-- ============ IMAGE LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+    <i class='bx bx-x'></i>
+  </button>
+  <img src="assets/Abhishek_image.jpg" alt="Portrait of Abhishek Kanaujiya" class="lightbox-img">
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="about">
+  <div class="wrap">
+    <p class="eyebrow reveal">// about</p>
+    <h2 class="section-title reveal">Get to know me</h2>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm a B.Tech Information Technology student at Shah &amp; Anchor Kutchhi Engineering
+          College, Mumbai, currently holding a CGPI of <strong>9.14</strong>. Over the past year
+          I've worked as a full-stack developer intern building production systems — an ERP
+          with role-based task tracking and an appointment platform with WhatsApp automation.
+        </p>
+        <p>
+          I like the full stack: designing the schema, wiring the API, and getting the pixels
+          right in the browser. Outside of client work, I spend time on competitive programming
+          and DSA, and I'm exploring machine learning alongside web development.
+        </p>
+        <a href="assets/Abhishek_kanaujiya_Resume6.pdf" download class="btn btn-primary">
+          <i class='bx bx-download'></i> Download CV
+        </a>
+      </div>
+
+      <div class="about-facts reveal">
+        <div class="fact"><i class='bx bx-map-pin'></i><div><span>Based in</span><strong>Mumbai, India</strong></div></div>
+        <div class="fact"><i class='bx bx-graduation'></i><div><span>Degree</span><strong>B.Tech, Information Technology</strong></div></div>
+        <div class="fact"><i class='bx bx-calendar'></i><div><span>Timeline</span><strong>Aug 2023 – Aug 2027</strong></div></div>
+        <div class="fact"><i class='bx bx-medal'></i><div><span>CGPI</span><strong>9.14 / 10</strong></div></div>
+        <div class="fact"><i class='bx bx-briefcase'></i><div><span>Open to</span><strong>Internships &amp; SDE roles</strong></div></div>
+        <div class="fact"><i class='bx bx-envelope'></i><div><span>Email</span><strong>kavikumar0454@gmail.com</strong></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="skills-section">
+  <div class="wrap">
+    <p class="eyebrow reveal">// skills</p>
+    <h2 class="section-title reveal">What I work with</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <h3><i class='bx bx-code-curly dot-blue'></i> Languages</h3>
+        <div class="chips">
+          <span class="chip chip-blue">Java</span>
+          <span class="chip chip-blue">Python</span>
+          <span class="chip chip-blue">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3><i class='bx bx-layer dot-green'></i> Full-Stack</h3>
+        <div class="chips">
+          <span class="chip chip-green">React.js</span>
+          <span class="chip chip-green">Node.js</span>
+          <span class="chip chip-green">Express.js</span>
+          <span class="chip chip-green">HTML5</span>
+          <span class="chip chip-green">CSS3</span>
+          <span class="chip chip-green">Tailwind CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3><i class='bx bx-data dot-orange'></i> Databases &amp; Cloud</h3>
+        <div class="chips">
+          <span class="chip chip-orange">MongoDB</span>
+          <span class="chip chip-orange">MySQL</span>
+          <span class="chip chip-orange">AWS EC2</span>
+          <span class="chip chip-orange">AWS S3</span>
+          <span class="chip chip-orange">AWS Lambda</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3><i class='bx bx-wrench dot-ink'></i> Tools &amp; Concepts</h3>
+        <div class="chips">
+          <span class="chip">DSA (Java)</span>
+          <span class="chip">DBMS</span>
+          <span class="chip">OOPS</span>
+          <span class="chip">Operating Systems</span>
+          <span class="chip">Computer Networks</span>
+          <span class="chip">Git/GitHub</span>
+          <span class="chip">CI/CD</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Postman</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="work" class="work-section">
+  <div class="wrap">
+    <p class="eyebrow reveal">// experience</p>
+    <h2 class="section-title reveal">Where I've worked</h2>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <h3>Full Stack Developer Intern</h3>
+            <span class="timeline-date">Jun 2025 – Dec 2025</span>
+          </div>
+          <p class="timeline-company">Bot2do Technologies · Work From Office</p>
+          <ul>
+            <li>Developed a production ERP system with role-based task allocation and tracking.</li>
+            <li>Built an appointment booking system with an admin dashboard and automation features.</li>
+            <li>Integrated the WhatsApp API for real-time notifications and reminders.</li>
+            <li>Implemented JWT-based authentication and role-based access control.</li>
+          </ul>
+          <div class="chips">
+            <span class="chip chip-blue">React.js</span>
+            <span class="chip chip-blue">Node.js</span>
+            <span class="chip chip-blue">Express.js</span>
+            <span class="chip chip-blue">MongoDB</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <h3>Full Stack Developer Intern</h3>
+            <span class="timeline-date">Dec 2025 – Jan 2026</span>
+          </div>
+          <p class="timeline-company">Vidyadaan Sahayyak Mandal (VSM) · Work From Office</p>
+          <ul>
+            <li>Developed and deployed a complete full-stack web application from scratch.</li>
+            <li>Built a responsive UI in React.js with backend services in Node.js &amp; Express.js.</li>
+            <li>Integrated MongoDB for efficient data storage and management.</li>
+            <li>Ensured smooth end-to-end deployment and functionality.</li>
+          </ul>
+          <div class="chips">
+            <span class="chip chip-green">React.js</span>
+            <span class="chip chip-green">Node.js</span>
+            <span class="chip chip-green">Express.js</span>
+            <span class="chip chip-green">MongoDB</span>
+            <span class="chip chip-green">Cloudinary</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="projects-section">
+  <div class="wrap">
+    <p class="eyebrow reveal">// projects</p>
+    <h2 class="section-title reveal">Featured builds</h2>
+
+    <div class="featured-grid">
+      <article class="feature-card reveal" style="--accent:var(--blue)">
+        <div class="feature-icon"><i class='bx bx-calendar-check'></i></div>
+        <h3>Automated Appointment Booking System</h3>
+        <p>Appointment platform with an admin dashboard for a healthcare client, built around
+          automated patient communication.</p>
+        <ul>
+          <li>Integrated WhatsApp API for confirmations, reminders &amp; updates.</li>
+          <li>Secure JWT authentication with role-based access control.</li>
+          <li>Improved patient engagement and streamlined scheduling workflows.</li>
+        </ul>
+        <div class="chips">
+          <span class="chip chip-blue">React.js</span><span class="chip chip-blue">Node.js</span>
+          <span class="chip chip-blue">Express.js</span><span class="chip chip-blue">MongoDB</span>
+          <span class="chip chip-blue">Mongoose</span>
+        </div>
+      </article>
+
+      <article class="feature-card reveal" style="--accent:var(--green)">
+        <div class="feature-icon"><i class='bx bx-cog'></i></div>
+        <h3>Custom Production Management ERP</h3>
+        <p>An ERP module for clothing production with end-to-end workflow management, from
+          order intake to size-wise dispatch.</p>
+        <ul>
+          <li>Order lifecycle management with size-wise allocation and tracking.</li>
+          <li>Role-based task assignment for Master, Karigar, Job Work &amp; group operations.</li>
+          <li>MinIO integration for real-time updates and secure media storage.</li>
+        </ul>
+        <div class="chips">
+          <span class="chip chip-green">React.js</span><span class="chip chip-green">Node.js</span>
+          <span class="chip chip-green">Express.js</span><span class="chip chip-green">MongoDB</span>
+          <span class="chip chip-green">MinIO</span>
+        </div>
+      </article>
+
+      <article class="feature-card reveal" style="--accent:var(--orange)">
+        <div class="feature-icon"><i class='bx bx-line-chart'></i></div>
+        <h3>IPL Vision</h3>
+        <p>A data-driven cricket analytics platform for exploring IPL player and team
+          performance, season by season.</p>
+        <ul>
+          <li>REST APIs built with Flask for player and match statistics.</li>
+          <li>Pandas-powered insights covering season-wise runs and trends.</li>
+          <li>Interactive charts with real-time search and filtering.</li>
+        </ul>
+        <div class="chips">
+          <span class="chip chip-orange">Flask</span><span class="chip chip-orange">React.js</span>
+          <span class="chip chip-orange">Pandas</span><span class="chip chip-orange">Chart.js</span>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="sub-heading reveal">Practice builds</h3>
+    <p class="sub-lead reveal">Smaller front-end exercises — sharpening UI, logic and layout fundamentals.</p>
+
+    <div class="practice-grid">
+      <div class="practice-card reveal">
+        <div class="practice-img"><img src="assets/calculator.png" alt="Calculator app UI" loading="lazy"></div>
+        <h4>Calculator</h4>
+      </div>
+      <div class="practice-card reveal">
+        <div class="practice-img"><img src="assets/weather.png" alt="Weather app UI" loading="lazy"></div>
+        <h4>Weather App</h4>
+      </div>
+      <div class="practice-card reveal">
+        <div class="practice-img"><img src="assets/timer.png" alt="Digital clock UI" loading="lazy"></div>
+        <h4>Digital Clock</h4>
+      </div>
+      <div class="practice-card reveal">
+        <div class="practice-img"><img src="assets/color.png" alt="Gradient generator UI" loading="lazy"></div>
+        <h4>Gradient Generator</h4>
+      </div>
+      <div class="practice-card reveal">
+        <div class="practice-img"><img src="assets/loging.png" alt="Login page UI concept one" loading="lazy"></div>
+        <h4>Login UI — Concept 1</h4>
+      </div>
+      <div class="practice-card reveal">
+        <div class="practice-img"><img src="assets/loging2.png" alt="Login page UI concept two" loading="lazy"></div>
+        <h4>Login UI — Concept 2</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS & ACHIEVEMENTS ============ -->
+<section id="certs" class="certs-section">
+  <div class="wrap">
+    <div class="certs-grid">
+      <div class="certs-col reveal">
+        <p class="eyebrow">// certifications</p>
+        <h2 class="section-title">Certifications</h2>
+        <ul class="list-cards">
+          <li><i class='bx bx-certification dot-blue'></i><div><strong>Introduction to Machine Learning</strong><span>IIT Madras · NPTEL — Elite Badge, 60% · Jul–Oct 2024</span></div></li>
+          <li><i class='bx bx-certification dot-green'></i><div><strong>Python Course For Beginners</strong><span>Scaler Academy · Jan 2024</span></div></li>
+          <li><i class='bx bx-certification dot-orange'></i><div><strong>Programming Essentials in C</strong><span>Cisco Networking Academy · Apr 2024</span></div></li>
+          <li><i class='bx bx-certification dot-blue'></i><div><strong>JavaScript For Freshers</strong><span>Udemy · Feb 2025</span></div></li>
+        </ul>
+      </div>
+
+      <div class="certs-col reveal">
+        <p class="eyebrow">// achievements</p>
+        <h2 class="section-title">Achievements &amp; Awards</h2>
+        <ul class="list-cards">
+          <li><i class='bx bx-trophy dot-orange'></i><div><strong>Winner — VSM Tech Hackathon</strong><span>Built &amp; shipped under time pressure</span></div></li>
+          <li><i class='bx bx-medal dot-blue'></i><div><strong>2nd Position — Poster Making Competition</strong><span>SAKEC, Vaachan Prerna Diwas 2023</span></div></li>
+          <li><i class='bx bx-line-chart dot-green'></i><div><strong>MHT-CET: 94.20 Percentile</strong><span>Maharashtra state entrance exam</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact-section">
+  <div class="wrap">
+    <p class="eyebrow reveal">// contact</p>
+    <h2 class="section-title reveal">Let's build something</h2>
+    <p class="sub-lead reveal">Have a project, an internship, or a role in mind? I'd like to hear about it.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <a class="contact-item" href="tel:+919580285184">
+          <i class='bx bx-phone'></i><div><span>Call</span><strong>+91 95802 85184</strong></div>
+        </a>
+        <a class="contact-item" href="https://chat.whatsapp.com/KJ9gfdxtwe9ISqvfaVpb43" target="_blank" rel="noopener">
+          <i class='bx bxl-whatsapp'></i><div><span>WhatsApp</span><strong>Message me</strong></div>
+        </a>
+        <a class="contact-item" href="mailto:kavikumar0454@gmail.com">
+          <i class='bx bx-envelope'></i><div><span>Email</span><strong>kavikumar0454@gmail.com</strong></div>
+        </a>
+        <a class="contact-item" href="https://github.com/Abhishek-2057" target="_blank" rel="noopener">
+          <i class='bx bxl-github'></i><div><span>GitHub</span><strong>Abhishek-2057</strong></div>
+        </a>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="b5dae0c9-9203-4c41-98e5-935f2fdf4e54">
+        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" name="name" id="cf-name" class="form-control" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" id="cf-email" class="form-control" placeholder="Email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" name="subject" id="cf-subject" class="form-control" placeholder="Subject" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="cf-message" class="form-control" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">
+          Send Message <i class='bx bx-send'></i>
+        </button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>&copy; <span id="year"></span> Abhishek Kanaujiya. Built from scratch with HTML, CSS &amp; JavaScript.</p>
+    <a href="#home" class="to-top" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
